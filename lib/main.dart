@@ -1,4 +1,5 @@
 import 'package:final_project/screen/home_screen.dart';
+import 'package:final_project/screen/news_screen.dart';
 import 'package:final_project/screen/profile_screen.dart';
 import 'package:final_project/splash_screen.dart';
 import 'package:flutter/material.dart';
@@ -36,14 +37,9 @@ class BottomNavigationBarExample extends StatefulWidget {
 class _BottomNavigationBarExampleState
     extends State<BottomNavigationBarExample> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
-    Text(
-      'Index 2: Search',
-      style: optionStyle,
-    ),
+    NewsScreen(),
     ProfileScreen(),
   ];
 

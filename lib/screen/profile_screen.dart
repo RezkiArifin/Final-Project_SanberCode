@@ -40,8 +40,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 66, horizontal: 20),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            const Text(
+              "Welcome",
+              style: TextStyle(
+                  fontWeight: FontWeight.w800,
+                  fontSize: 25,
+                  color: Color(0xff42C6C5)),
+            ),
+            const SizedBox(
+              height: 5,
+            ),
             Container(
               height: 110,
               width: double.infinity,
@@ -79,14 +89,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
             ),
             const SizedBox(
-              height: 20,
+              height: 50,
             ),
             Container(
-              alignment: Alignment.bottomCenter,
               height: 50,
               width: double.infinity,
               decoration: BoxDecoration(
-                  color: Colors.blue, borderRadius: BorderRadius.circular(5)),
+                  color: const Color(0xff42C6C5),
+                  borderRadius: BorderRadius.circular(5)),
               child: Container(
                 alignment: Alignment.center,
                 child: TextButton(
