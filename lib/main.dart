@@ -1,8 +1,10 @@
+import 'package:final_project/routes/page_routes.dart';
 import 'package:final_project/screen/home_screen.dart';
 import 'package:final_project/screen/news_screen.dart';
 import 'package:final_project/screen/profile_screen.dart';
 import 'package:final_project/splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -22,6 +24,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const SplashScreen(),
+      getPages: PageRoutesApp.pages,
     );
   }
 }

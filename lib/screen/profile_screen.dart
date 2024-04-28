@@ -1,8 +1,10 @@
 import 'package:dio/dio.dart';
 import 'package:final_project/config/dio_http.dart';
-import 'package:final_project/screen/auth/login_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import '../routes/route_name.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -25,10 +27,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
       SharedPreferences preferences = await SharedPreferences.getInstance();
       await preferences.clear();
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => const LoginScreen()),
-      );
+      Get.toNamed(RouteName.loginScreen);
     } catch (e) {
       print("Gagal");
     }
@@ -95,8 +94,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
               height: 50,
               width: double.infinity,
               decoration: BoxDecoration(
-                  color: const Color(0xff42C6C5),
-                  borderRadius: BorderRadius.circular(5)),
+                color: const Color(0xff42C6C5),
+                borderRadius: BorderRadius.circular(5),
+                boxShadow: const [
+                  BoxShadow(
+                      color: Colors.black26,
+                      spreadRadius: 1,
+                      blurRadius: 6,
+                      offset: Offset(0, 4)),
+                ],
+              ),
               child: Container(
                 alignment: Alignment.center,
                 child: TextButton(

@@ -60,7 +60,11 @@ class _NewsScreenState extends State<NewsScreen> {
                           style: const TextStyle(
                               fontSize: 13, fontWeight: FontWeight.w300),
                         ),
-                        leading: Image.network(item.image),
+                        leading: Image.network(
+                          item.image,
+                          width: 120,
+                          height: 80,
+                        ),
                         onTap: () {
                           Navigator.push(
                             context,

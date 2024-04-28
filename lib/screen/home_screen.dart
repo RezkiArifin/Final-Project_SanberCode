@@ -44,6 +44,13 @@ class _HomeScreenState extends State<HomeScreen> {
                         Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
+                            boxShadow: const [
+                              BoxShadow(
+                                  color: Colors.black26,
+                                  spreadRadius: 1,
+                                  blurRadius: 6,
+                                  offset: Offset(0, 4)),
+                            ],
                             image: const DecorationImage(
                               fit: BoxFit.cover,
                               image: NetworkImage(
@@ -97,8 +104,16 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: 90,
                       height: 40,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          color: Colors.grey[300]),
+                        borderRadius: BorderRadius.circular(50),
+                        color: Colors.grey[300],
+                        boxShadow: const [
+                          BoxShadow(
+                              color: Colors.black26,
+                              spreadRadius: 1,
+                              blurRadius: 2,
+                              offset: Offset(0, 4)),
+                        ],
+                      ),
                       child: const Center(
                         child: Text(
                           "Sport",
@@ -113,8 +128,16 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: 90,
                       height: 40,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          color: Colors.grey[300]),
+                        borderRadius: BorderRadius.circular(50),
+                        color: Colors.grey[300],
+                        boxShadow: const [
+                          BoxShadow(
+                              color: Colors.black26,
+                              spreadRadius: 1,
+                              blurRadius: 2,
+                              offset: Offset(0, 4)),
+                        ],
+                      ),
                       child: const Center(
                         child: Text(
                           "Politics",
@@ -129,8 +152,16 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: 90,
                       height: 40,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          color: Colors.grey[300]),
+                        borderRadius: BorderRadius.circular(50),
+                        color: Colors.grey[300],
+                        boxShadow: const [
+                          BoxShadow(
+                              color: Colors.black26,
+                              spreadRadius: 1,
+                              blurRadius: 2,
+                              offset: Offset(0, 4)),
+                        ],
+                      ),
                       child: const Center(
                         child: Text(
                           "Fashion",
@@ -153,8 +184,16 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: 90,
                       height: 40,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          color: Colors.grey[300]),
+                        borderRadius: BorderRadius.circular(50),
+                        color: Colors.grey[300],
+                        boxShadow: const [
+                          BoxShadow(
+                              color: Colors.black26,
+                              spreadRadius: 1,
+                              blurRadius: 2,
+                              offset: Offset(0, 4)),
+                        ],
+                      ),
                       child: const Center(
                         child: Text(
                           "Science",
@@ -169,8 +208,16 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: 90,
                       height: 40,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          color: Colors.grey[300]),
+                        borderRadius: BorderRadius.circular(50),
+                        color: Colors.grey[300],
+                        boxShadow: const [
+                          BoxShadow(
+                              color: Colors.black26,
+                              spreadRadius: 1,
+                              blurRadius: 2,
+                              offset: Offset(0, 4)),
+                        ],
+                      ),
                       child: const Center(
                         child: Text(
                           "Art",
@@ -193,8 +240,16 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: 90,
                       height: 40,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          color: Colors.grey[300]),
+                        borderRadius: BorderRadius.circular(50),
+                        color: Colors.grey[300],
+                        boxShadow: const [
+                          BoxShadow(
+                              color: Colors.black26,
+                              spreadRadius: 1,
+                              blurRadius: 2,
+                              offset: Offset(0, 4)),
+                        ],
+                      ),
                       child: const Center(
                         child: Text(
                           "Technology",
@@ -209,8 +264,16 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: 90,
                       height: 40,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          color: Colors.grey[300]),
+                        borderRadius: BorderRadius.circular(50),
+                        color: Colors.grey[300],
+                        boxShadow: const [
+                          BoxShadow(
+                              color: Colors.black26,
+                              spreadRadius: 1,
+                              blurRadius: 2,
+                              offset: Offset(0, 4)),
+                        ],
+                      ),
                       child: const Center(
                         child: Text(
                           "Health",
@@ -225,8 +288,16 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: 90,
                       height: 40,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          color: Colors.grey[300]),
+                        borderRadius: BorderRadius.circular(50),
+                        color: Colors.grey[300],
+                        boxShadow: const [
+                          BoxShadow(
+                              color: Colors.black26,
+                              spreadRadius: 1,
+                              blurRadius: 2,
+                              offset: Offset(0, 4)),
+                        ],
+                      ),
                       child: const Center(
                         child: Text(
                           "Lifestyle",
@@ -261,8 +332,16 @@ class _HomeScreenState extends State<HomeScreen> {
                         width: 70,
                         height: 80,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            color: Colors.grey[300]),
+                          borderRadius: BorderRadius.circular(8),
+                          color: Colors.grey[300],
+                          boxShadow: const [
+                            BoxShadow(
+                                color: Colors.black26,
+                                spreadRadius: 1,
+                                blurRadius: 2,
+                                offset: Offset(0, 4)),
+                          ],
+                        ),
                         child: Column(
                           children: [
                             Image.asset(
@@ -289,8 +368,16 @@ class _HomeScreenState extends State<HomeScreen> {
                         width: 70,
                         height: 80,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            color: Colors.grey[300]),
+                          borderRadius: BorderRadius.circular(8),
+                          color: Colors.grey[300],
+                          boxShadow: const [
+                            BoxShadow(
+                                color: Colors.black26,
+                                spreadRadius: 1,
+                                blurRadius: 2,
+                                offset: Offset(0, 4)),
+                          ],
+                        ),
                         child: Column(
                           children: [
                             Image.asset(
@@ -317,8 +404,16 @@ class _HomeScreenState extends State<HomeScreen> {
                         width: 70,
                         height: 80,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            color: Colors.grey[300]),
+                          borderRadius: BorderRadius.circular(8),
+                          color: Colors.grey[300],
+                          boxShadow: const [
+                            BoxShadow(
+                                color: Colors.black26,
+                                spreadRadius: 1,
+                                blurRadius: 2,
+                                offset: Offset(0, 4)),
+                          ],
+                        ),
                         child: Column(
                           children: [
                             Image.asset(

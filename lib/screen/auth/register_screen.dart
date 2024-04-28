@@ -1,7 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:final_project/config/dio_http.dart';
-import 'package:final_project/screen/auth/login_screen.dart';
+import 'package:final_project/routes/route_name.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:loading_overlay/loading_overlay.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -46,11 +47,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
           onPressed: () {},
         ),
       );
-
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => const LoginScreen()),
-      );
+      Get.toNamed(RouteName.loginScreen);
     } on DioException catch (dioException) {
       var message = "";
       switch (dioException.response!.statusCode) {
@@ -305,11 +302,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         const Text("Sudah Punya akun?"),
                         TextButton(
                             onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const LoginScreen()),
-                              );
+                              Get.toNamed(RouteName.loginScreen);
                             },
                             child: const Text(
                               "Login",
@@ -324,8 +317,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       height: 45,
                       width: double.infinity,
                       decoration: BoxDecoration(
-                          color: const Color(0xff1F99CC),
-                          borderRadius: BorderRadius.circular(100)),
+                        color: const Color(0xff1F99CC),
+                        borderRadius: BorderRadius.circular(100),
+                        boxShadow: const [
+                          BoxShadow(
+                              color: Colors.black26,
+                              spreadRadius: 1,
+                              blurRadius: 6,
+                              offset: Offset(0, 4)),
+                        ],
+                      ),
                       child: Container(
                         alignment: Alignment.center,
                         child: TextButton(

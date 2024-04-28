@@ -1,11 +1,11 @@
 import 'package:dio/dio.dart';
 import 'package:final_project/config/dio_http.dart';
-import 'package:final_project/main.dart';
-import 'package:final_project/screen/auth/register_screen.dart';
-import 'package:final_project/screen/home_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:loading_overlay/loading_overlay.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import '../../routes/route_name.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -38,12 +38,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
       final SharedPreferences prefs = await SharedPreferences.getInstance();
       prefs.setString('user-token', response.data["token"]);
-
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-            builder: (context) => const BottomNavigationBarExample()),
-      );
+      Get.toNamed(RouteName.bottomNavbar);
     } on DioException catch (dioException) {
       var message = "";
       switch (dioException.response!.statusCode) {
@@ -209,12 +204,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         const Text("Belum Punya akun?"),
                         TextButton(
                             onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        const RegisterScreen()),
-                              );
+                              Get.toNamed(RouteName.registerScreen);
                             },
                             child: const Text(
                               "Daftar",
@@ -229,8 +219,16 @@ class _LoginScreenState extends State<LoginScreen> {
                       height: 45,
                       width: double.infinity,
                       decoration: BoxDecoration(
-                          color: const Color(0xff1F99CC),
-                          borderRadius: BorderRadius.circular(100)),
+                        color: const Color(0xff1F99CC),
+                        borderRadius: BorderRadius.circular(100),
+                        boxShadow: const [
+                          BoxShadow(
+                              color: Colors.black26,
+                              spreadRadius: 1,
+                              blurRadius: 6,
+                              offset: Offset(0, 4)),
+                        ],
+                      ),
                       child: Container(
                         alignment: Alignment.center,
                         child: TextButton(
